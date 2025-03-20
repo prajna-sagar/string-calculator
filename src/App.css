@@ -18,9 +18,21 @@
   padding: 10px;
   flex-direction: column;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  border-radius: 8px;
 }
 
 .add-button {
-  width: 50px;
-  margin-top:10px;
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.calculator-input {
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+p {
+  margin: 0
 }
