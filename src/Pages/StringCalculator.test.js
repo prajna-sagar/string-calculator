@@ -71,4 +71,15 @@ describe("StringCalculator Component", () => {
     expect(screen.getByText(/Negative numbers not allowed: -2/)).toBeInTheDocument();
   });
 
+  test('throw error for empty input', () => {
+    const { container } = render(<StringCalculator />);
+    const input = container.querySelector('.calculator-input');
+    const addButton = screen.getByText(/ADD/);
+  
+    fireEvent.change(input, { target: { value: "" } });
+    fireEvent.click(addButton);
+  
+    expect(screen.getByText(/Invalid Input/)).toBeInTheDocument();
+  });
+
 });
