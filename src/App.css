@@ -1,0 +1,26 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator-section {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  width: 300px;
+  padding: 10px;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.add-button {
+  width: 50px;
+  margin-top:10px;
+}
