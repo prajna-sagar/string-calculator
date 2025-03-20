@@ -63,7 +63,7 @@ function StringCalculator() {
 			{error ? (
 				<p style={{ color: "red" }}>{error}</p>
 			) : result !== null ? (
-				<p>Result: <b>{result}</b></p>
+				<p>Result: {result}</p>
 			) : null}
 		</div>
 	);
