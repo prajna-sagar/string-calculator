@@ -49,7 +49,7 @@ function StringCalculator() {
 		<div className="calculator-section">
 			<div className="calculator-header">String Calculator</div>
 			<div className='calculator-body'>
-			<label>Enter Numbers:</label> <br />
+			<label>Enter Numbers</label> <br />
 			<label>(Format: <b style={{ color: '#41ad14'}}>//[delimiter]\n[numbers]</b> or <b style={{ color: '#41ad14'}}>[numbers]</b> )</label> <br />
 			<textarea
 				className='calculator-input'
