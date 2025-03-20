@@ -1,6 +1,17 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
+  color: #0000009e;
+}
+
+label {
+  font-weight: 600;
+}
+
+p {
+  margin: 15px 0px 5px 0px;
+  font-weight: 600;
+
 }
 
 .App {
@@ -12,19 +23,37 @@
 
 .calculator-section {
   display: flex;
-  justify-content: center;
-  height: 200px;
+  height: 300px;
   width: 300px;
-  padding: 10px;
   flex-direction: column;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
   border-radius: 8px;
 }
 
+.calculator-header {
+  height: 50px;
+  font-weight: 700;
+  width: 100%;
+  background-color: #007bff8f;
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 17px;
+  font-size: 16px;
+}
+
 .add-button {
   width: 100px;
   margin: 0 auto;
+  height: 25px;
   margin-top: 15px;
+  background-color: #007bffd1;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 11%), 0 6px 20px 0 rgb(0 0 0 / 11%);
+  border-radius: 5px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .calculator-input {
@@ -33,6 +62,8 @@
   border-radius: 5px;
 }
 
-p {
-  margin: 0
+.calculator-body {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }

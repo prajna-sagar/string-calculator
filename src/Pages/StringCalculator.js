@@ -6,7 +6,7 @@ function StringCalculator() {
 	const [error, setError] = useState("");
 
 	const add = (numbers) => {
-		if (!numbers) return 0;
+		if (!numbers) throw new Error(`Invalid Input`);
 		let delimiter = /,|\n/;
 		if (numbers.startsWith("//")) {
 			if (numbers.includes("\\n")) {
@@ -47,22 +47,26 @@ function StringCalculator() {
 
 	return (
 		<div className="calculator-section">
+			<div className="calculator-header">String Calculator</div>
+			<div className='calculator-body'>
 			<label>Enter Numbers:</label> <br />
-			<label>(Format: <b>//[delimiter]\n[numbers]</b>)</label> <br />
+			<label>(Format: <b style={{ color: '#41ad14'}}>//[delimiter]\n[numbers]</b> or <b style={{ color: '#41ad14'}}>[numbers]</b> )</label> <br />
 			<textarea
 				className='calculator-input'
 				value={inputData}
+				placeholder='Eg:  //;\n1;2  or 1,2,3'
 				onChange={(e) => setInputData(e.target.value)}
 			/>
 			<button className="add-button" onClick={handleAddition}>
 				ADD
 			</button>
-			<br />
 			{error ? (
 				<p style={{ color: "red" }}>{error}</p>
 			) : result !== null ? (
 				<p>Result: {result}</p>
 			) : null}
+			</div>
+			
 		</div>
 	);
 }
