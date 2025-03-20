@@ -7,10 +7,8 @@ function StringCalculator() {
 
 	const add = (numbers) => {
 		if (!numbers) return 0;
-		console.log('numbers ', numbers)
 		let delimiter = /,|\n/;
 		if (numbers.startsWith("//")) {
-			console.log('yess', numbers.includes("\\n"))
 			if (numbers.includes("\\n")) {
 				numbers = numbers.replace(/\\n/g, "\n");
 			}
@@ -22,13 +20,13 @@ function StringCalculator() {
 
 		const numArray = numbers.split(delimiter)
 			.map(n => {
+				if (!n)throw new Error(`Invalid Input`);
 				const num = Number(n)
 				if (isNaN(num)) {
 					throw new Error(`Invalid Input: ${n}`);  // Throw error if not a valid number
 				}
 				return num;
 			})
-		console.log('numArray ', numArray)
 		const negatives = numArray.filter(n => n < 0);
 		if (negatives.length) {
 			throw new Error(`Negative numbers not allowed: ${negatives.join(", ")}`);
