@@ -1,5 +1,4 @@
-You can view this application in below link
-https://prajna-sagar.github.io/string-calculator/
+You can view this application in https://prajna-sagar.github.io/string-calculator/
 
 # Getting Started with Create React App
 
